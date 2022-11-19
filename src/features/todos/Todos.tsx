@@ -5,7 +5,7 @@ import {
   updateTodoValue,
   deleteTodo,
   toggleCompleteTodo,
-  completeAll,
+  toggleCompleteAll,
   selectTodos
 } from './todosSlice';
 import Todo from './Todo';

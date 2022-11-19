@@ -38,8 +38,17 @@ const todosSlice = createSlice({
       const completed = state.todos[index].completed;
       state.todos[index].completed = !completed;
     },
-    completeAll: (state) => {
-      state.todos = state.todos.map((todo) => ({ ...todo, completed: true }));
+    toggleCompleteAll: (state) => {
+      const isCompletedAll = state.todos.every((todo) => todo.completed);
+      const completedTodos = state.todos.map((todo) => ({
+        ...todo,
+        completed: true,
+      }));
+      const activeTodos = state.todos.map((todo) => ({
+        ...todo,
+        completed: false,
+      }));
+      state.todos = isCompletedAll ? activeTodos : completedTodos;
     },
   },
 });
@@ -49,7 +58,7 @@ export const {
   updateTodoValue,
   deleteTodo,
   toggleCompleteTodo,
-  completeAll,
+  toggleCompleteAll,
 } = todosSlice.actions;
 
 export const selectTodos = (state: RootState) => state.todosState.todos;
