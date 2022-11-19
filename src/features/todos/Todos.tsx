@@ -8,6 +8,7 @@ import {
   completeAll,
   selectTodos
 } from './todosSlice';
+import Todo from './Todo';
 
 export default function Todos() {
   const todos = useAppSelector(selectTodos);
@@ -17,7 +18,7 @@ export default function Todos() {
 
   return (
     <div>
-      This is Todos app.
+      <Todo id="1" value="breakfast" completed={false}  />
     </div>
   );
 }
