@@ -1,3 +1,7 @@
+# Todos-App
+
+This app has written by ReactJS, React Hooks and ReduxToolkit.
+
 1/ Clone this app to your local by setting a SSH key
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
 
@@ -6,3 +10,5 @@ https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a
 3/ Run `npm install` to install all the package needed
 
 4/ Run `npm start` to run on your local
+
+5/ Run test by `npm run test`
